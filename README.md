@@ -21,9 +21,11 @@
 
 ## 快速开始
 
-### 方式一：直接运行 exe
+### 方式一：下载现成的 exe
 
-双击 `原琴转换器.exe`（如发布页提供），无需安装 Python、无需联网。
+到 [**Releases**](https://github.com/wycwysgs/yuanqin-converter/releases/latest) 下载 `yuanqin-converter.exe`，双击即可运行 —— 不用装 Python，也不联网。
+
+> 单文件程序，首次启动需解包到临时目录，会慢几秒。Windows x64。
 
 ### 方式二：源码运行
 
