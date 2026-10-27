@@ -1,0 +1,8 @@
+# 统一用 LF，避免 Windows 检出后整仓显示被修改
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.exe binary
+*.mid binary
+*.gs2 binary

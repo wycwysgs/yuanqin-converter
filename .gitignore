@@ -1,0 +1,26 @@
+# 虚拟环境
+.venv/
+venv/
+env/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller 打包产物
+build/
+dist/
+*.spec
+
+# 编辑器
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# 本地转换试验
+*.gs2
+*.mid
+*.midi
+!tests/fixtures/*.mid
