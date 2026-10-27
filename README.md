@@ -1,6 +1,12 @@
 # 原琴转换器 · MIDI → GS2
 
-把普通 MIDI 文件转换成《原神》**原琴助手（BetterGI / YuanQinAssistant）** 能直接播放的 `.gs2` 曲谱。
+[![tests](https://github.com/wycwysgs/yuanqin-converter/actions/workflows/test.yml/badge.svg)](https://github.com/wycwysgs/yuanqin-converter/actions/workflows/test.yml)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](requirements.txt)
+
+**把普通 MIDI 变成《原神》里能弹的曲谱。** 输出可直接交给 BetterGI 原琴助手（YuanQinAssistant）播放的 `.gs2` 文件 —— 自动移调、八度折回、生成前自校验。
+
+> Convert standard MIDI files into `.gs2` scores for **Genshin Impact**'s in-game instrument (原琴 / 诗琴, e.g. the Windsong Lyre), playable through [BetterGI](https://github.com/babalae/better-genshin-impact)'s YuanQinAssistant. Auto-transpose, octave folding, and validation before writing.
 
 保留原曲节奏与时间轴，自动移调到 C 大调、把超出琴域的音符按八度折回，输出带自校验的曲谱文件：生成后无法在游戏里弹错，因为转换阶段就会拦下不合法的按键序列。
 
@@ -131,3 +137,36 @@ pyinstaller --noconfirm --onefile --windowed --name 原琴转换器 app.py
 ## License
 
 [MIT](LICENSE)
+
+---
+
+## English
+
+A small GUI tool that turns any MIDI file into a `.gs2` score for **Genshin Impact**'s in-game instrument (原琴 / 诗琴), so it can be auto-played by [BetterGI](https://github.com/babalae/better-genshin-impact)'s YuanQinAssistant.
+
+**What it does**
+
+- Rebuilds the note timeline from MIDI ticks, preserving the tempo map; optional 0.25×–4× speed
+- Track picking (all note-bearing tracks by default) and drum-track (channel 10) removal
+- Suggests a transposition in −6…+5 that puts the most notes on C-major white keys; leftover accidentals are shifted down, shifted up, or dropped
+- Notes outside the instrument range fold back by whole octaves; simultaneous duplicates merge, overlaps are clipped
+- Two-row layout (`QWERTYU` / `ASDFGHJ`, MIDI 60–83) or three-row (`+ ZXCVBNM`, MIDI 48–83)
+- Every score is validated (event syntax, key pairing, range, white keys) before it is written, so an unplayable sequence can never reach the game
+- Writes directly into BetterGI's `assets/score`, or saves anywhere; existing files are never overwritten
+
+**Run it**
+
+```powershell
+python -m pip install -r requirements.txt
+python app.py
+```
+
+Or download `yuanqin-converter.exe` from [Releases](https://github.com/wycwysgs/yuanqin-converter/releases/latest) (Windows x64, no Python needed).
+
+**Score format**
+
+`!v/2` header plus one `!tr/` line of `|`-separated events: `<ticks>n<pitch>` (press), `<ticks>u<pitch>` (release), `<ticks>s<tempo>` (μs per beat), where `<ticks>` is delta time since the previous event and `!di/` holds the MIDI ticks-per-beat.
+
+**Notes**
+
+Requires Python 3.9+ and [mido](https://github.com/mido/mido). Licensed under MIT. Not affiliated with HoYoverse; the repository ships no MIDI files or finished scores.
