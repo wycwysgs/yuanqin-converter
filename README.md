@@ -7,6 +7,8 @@
 
 **[下载 Windows 版](https://github.com/wycwysgs/yuanqin-converter/releases/latest)** · [详细使用说明](docs/使用说明.txt)
 
+现提供 **[带曲谱完整版 ZIP](https://github.com/wycwysgs/yuanqin-converter/releases/download/v3.4.1/yuanqin-toolbox-with-scores-v3.4.1.zip)** 和 **[独立曲谱包](https://github.com/wycwysgs/yuanqin-converter/releases/download/v3.4.1/yuanqin-scores.zip)**。曲库含 33 个曲目条目，另保留 29 份历史版本，共 62 份不同内容的 GS2；解压完整版后双击程序即可选曲。查看 [全部曲谱与使用方式](scores/README.md)。
+
 ## 3.4 版
 
 3.4.1 修复极短间隔连续转换时，CSV 记录可能重名导致保存失败的问题。
@@ -95,10 +97,10 @@ python -m unittest discover -s tests -v
 
 ## 第三方与许可
 
-本项目与 HoYoverse、[BetterGI](https://github.com/babalae/better-genshin-impact) 无关联。依赖 [mido](https://github.com/mido/mido)（MIT）。仓库和发布包不包含 MIDI 源文件、个人曲谱或运行日志。
+本项目与 HoYoverse、[BetterGI](https://github.com/babalae/better-genshin-impact) 无关联。依赖 [mido](https://github.com/mido/mido)（MIT）。仓库与可选下载包包含用户提供的 GS2 曲谱，保留文件中的原作者信息；不包含 MIDI 源文件、个人设置或运行日志。程序源码的 MIT 许可不改变音乐和曲谱的原有权利。
 
 [MIT](LICENSE)
 
 ## English
 
-Yuanqin Toolbox is a Windows GUI for batch MIDI-to-GS2 conversion, library management, synthesized preview and Genshin Impact instrument playback. Version 3.4 adds a shared navy/teal interface and a compact topmost player. Choose two or three keyboard rows at playback time. Download the executable from Releases, or run `python app.py` with Python 3.10+ and mido. The executable requests administrator privileges to match an elevated game. No MIDI files or finished music scores are distributed.
+Yuanqin Toolbox is a Windows GUI for batch MIDI-to-GS2 conversion, library management, synthesized preview and Genshin Impact instrument playback. Version 3.4 adds a shared navy/teal interface and a compact topmost player. Choose two or three keyboard rows at playback time. Download the executable or optional score bundle from Releases, or run `python app.py` with Python 3.10+ and mido. The executable requests administrator privileges to match an elevated game. The score collection contains 33 default entries and 29 historical variants, preserving original GS2 contents and attribution. No MIDI source files, personal settings or logs are distributed. The MIT license covers program source code and does not grant rights to the music or scores.

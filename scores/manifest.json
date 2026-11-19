@@ -1,0 +1,1078 @@
+{
+  "schema": 1,
+  "songs": 33,
+  "unique_files": 62,
+  "primary_files": 33,
+  "historical_files": 29,
+  "input_copies": 138,
+  "files": [
+    {
+      "file": "曲谱/Faded.gs2",
+      "primary": true,
+      "sha256": "911796747c86696d8adb15b64c308cd5d3e70cf62c6eb9e5226f2e47b6dbfe41",
+      "bytes": 13513,
+      "title": "Faded",
+      "original_names": [
+        "Faded（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 158.58,
+      "notes": 1134,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/Faded（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "3959128187064994fd168b33f8c0edde6b8f779a2f43f47ee2951d957b9db783",
+      "bytes": 12523,
+      "title": "Faded",
+      "original_names": [
+        "Faded（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 158.58,
+      "notes": 1041,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/Nevada（图片简谱·节奏近似版）.gs2",
+      "primary": true,
+      "sha256": "3b23a7792931bfd3712c3c35b927483c841eddfaf2ddba2222ac3854cea06176",
+      "bytes": 1058,
+      "title": "Nevada（图片简谱·节奏近似版）",
+      "original_names": [
+        "Nevada（图片简谱·节奏近似版）.gs2"
+      ],
+      "sources": [
+        "转换输出"
+      ],
+      "seconds": 20.25,
+      "notes": 54,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/Nevada（完整MIDI）.gs2",
+      "primary": true,
+      "sha256": "ba51a9e30b6bd064c24cf14b1cc0ef42b61048a7e85225204dcea8badf830820",
+      "bytes": 14832,
+      "title": "Nevada（完整MIDI）",
+      "original_names": [
+        "Nevada（完整MIDI·三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "转换输出"
+      ],
+      "seconds": 123.36,
+      "notes": 1349,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/Nevada（完整MIDI·两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "6fc15820041b0ef635db7edafb6838fd3f16c3b50d0618d35ea2bc9773441efc",
+      "bytes": 13392,
+      "title": "Nevada（完整MIDI）",
+      "original_names": [
+        "Nevada（完整MIDI·两排琴键版）.gs2"
+      ],
+      "sources": [
+        "转换输出"
+      ],
+      "seconds": 123.36,
+      "notes": 1205,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/oh susanna (蜜雪冰城).gs2",
+      "primary": true,
+      "sha256": "5adf99bd1ef4349fa17af29693742e6d4cebd0a3122bd9ba0c6c868ff8465e6b",
+      "bytes": 1133,
+      "title": "oh susanna (蜜雪冰城)",
+      "original_names": [
+        "oh susanna (蜜雪冰城)（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 42.667,
+      "notes": 85,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/oh susanna (蜜雪冰城)（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "ce823d4db6888d003faad7cbc6bd4b159f341a7bb7281a59fe4e9e6cf91d45c9",
+      "bytes": 1133,
+      "title": "oh susanna (蜜雪冰城)",
+      "original_names": [
+        "oh susanna (蜜雪冰城)（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 42.667,
+      "notes": 85,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/one last kiss.gs2",
+      "primary": true,
+      "sha256": "73a6b8d6f72dcc57f04e6e990738f7321758be6eb66c491523e612d4ce1786f7",
+      "bytes": 6989,
+      "title": "one last kiss",
+      "original_names": [
+        "one last kiss（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 84.358,
+      "notes": 610,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/one last kiss（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "c9304157860493d730c7f89fc3511e8ac6c1322fe2be37e4cc9b88bfbb023c7f",
+      "bytes": 6831,
+      "title": "one last kiss",
+      "original_names": [
+        "one last kiss（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 84.358,
+      "notes": 595,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/see you again.gs2",
+      "primary": true,
+      "sha256": "956df81c269ee3fb88b8398b50709fbc5162c9eaa8e5275d5380e124bfadcf7d",
+      "bytes": 2458,
+      "title": "see you again",
+      "original_names": [
+        "see you again（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 53.4,
+      "notes": 195,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/see you again（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "69678c30c8bee4413a8e71be1e16f7bf9203924c733e6ffd730be3f21d7c0569",
+      "bytes": 2399,
+      "title": "see you again",
+      "original_names": [
+        "see you again（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 53.4,
+      "notes": 190,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/See You Again原琴版.gs2",
+      "primary": true,
+      "sha256": "81b58683cfbb50b85b988b324d94001b4a76cf69038d6e60c31939dd3d95a20d",
+      "bytes": 13624,
+      "title": "See You Again原琴版",
+      "original_names": [
+        "See You Again原琴版（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 240.006,
+      "notes": 1270,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/See You Again原琴版（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "13f1c9020c6baf658f2e4282093ed612b624d73c0fc24a14761e6d5d5f55c23a",
+      "bytes": 12702,
+      "title": "See You Again原琴版",
+      "original_names": [
+        "See You Again原琴版（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 240.006,
+      "notes": 1178,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/Vicetone - Nevada (Full Piano).gs2",
+      "primary": true,
+      "sha256": "05465a0f9bc0086c835ff82b1a4d5edff4e14ba2709f333d81697d91455481cc",
+      "bytes": 14588,
+      "title": "Vicetone - Nevada (Full Piano)",
+      "original_names": [
+        "Vicetone - Nevada (Full Piano)（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 123.36,
+      "notes": 1349,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/Vicetone - Nevada (Full Piano)（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "f99b8803e5fff721f69d286944f5c2c11c1bcd22102a15cffcc9c94899219528",
+      "bytes": 13148,
+      "title": "Vicetone - Nevada (Full Piano)",
+      "original_names": [
+        "Vicetone - Nevada (Full Piano)（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 123.36,
+      "notes": 1205,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/《云原神》.gs2",
+      "primary": true,
+      "sha256": "9391a72711b8066ecd74b67ea60bb64030eb4fbb2b43fbf2292b06c4814bad2a",
+      "bytes": 48561,
+      "title": "《云原神》",
+      "original_names": [
+        "《云原神》（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库"
+      ],
+      "seconds": 47.267,
+      "notes": 4839,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/《云原神》（三排诗琴版）.gs2",
+      "primary": false,
+      "sha256": "973dd04419642f15bad02295811ed1840c4efcb8de5272003163bd880e09241c",
+      "bytes": 48568,
+      "title": "《云原神》",
+      "original_names": [
+        "《云原神》（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP"
+      ],
+      "seconds": 47.267,
+      "notes": 4839,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/《云原神》（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "64d32ac1211ab8944aae13f462ebdc563b188ada534360b0bae0f785fc6ca1be",
+      "bytes": 47769,
+      "title": "《云原神》",
+      "original_names": [
+        "《云原神》（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 47.267,
+      "notes": 4759,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/【原琴】《春日影》.gs2",
+      "primary": true,
+      "sha256": "3c46631fb8d6b9053c70cfd77cf63d701471d037e9f17c8370f0bb0e6ab5314d",
+      "bytes": 16730,
+      "title": "【原琴】《春日影》",
+      "original_names": [
+        "【原琴】《春日影》（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 262.329,
+      "notes": 1490,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/【原琴】《春日影》（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "878189eb9279350e43fefba6e1c4ee6ca3354d1724cab1fe31fb54d7663a52af",
+      "bytes": 16310,
+      "title": "【原琴】《春日影》",
+      "original_names": [
+        "【原琴】《春日影》（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 262.329,
+      "notes": 1449,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/【原神】花神之舞.gs2",
+      "primary": true,
+      "sha256": "a52d2530ca692fbb7f8cb0c51cc99c12605f025e0629b13ea24782585d02e422",
+      "bytes": 12305,
+      "title": "【原神】花神之舞",
+      "original_names": [
+        "【原神】花神之舞（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 120.519,
+      "notes": 1080,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/【原神】花神之舞（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "18a13e9d7a7064f7ca409abae856c73a41683800c010c2ac18d27043caf4a5fe",
+      "bytes": 12191,
+      "title": "【原神】花神之舞",
+      "original_names": [
+        "【原神】花神之舞（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 120.519,
+      "notes": 1071,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/【原神演奏】Faded 合奏版.gs2",
+      "primary": true,
+      "sha256": "a1e009bebe384da73f2d22167e0a49ddf0e67c61fca5b156b8c2cff98872d46e",
+      "bytes": 12982,
+      "title": "【原神演奏】Faded 合奏版",
+      "original_names": [
+        "【原神演奏】Faded 合奏版（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 213.34,
+      "notes": 1227,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/【原神演奏】Faded 合奏版（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "4add4ad436f007f3f57e1b380a0554eacbc4c746da99f3239a0e278c68c8080a",
+      "bytes": 11632,
+      "title": "【原神演奏】Faded 合奏版",
+      "original_names": [
+        "【原神演奏】Faded 合奏版（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 213.34,
+      "notes": 1095,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/【原神演奏用】周杰伦—青花瓷.gs2",
+      "primary": true,
+      "sha256": "e42caffbdf63dc87b8169e4270f553d7f6db99c0216dfa2e2152a4804f524b36",
+      "bytes": 13418,
+      "title": "【原神演奏用】周杰伦—青花瓷",
+      "original_names": [
+        "【原神演奏用】周杰伦—青花瓷（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 273.133,
+      "notes": 1239,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/【原神演奏用】周杰伦—青花瓷（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "2e58a7019bf598a94608c4632ab0c3d6842fe3e98f4d37601c6d68cde7f627a6",
+      "bytes": 13230,
+      "title": "【原神演奏用】周杰伦—青花瓷",
+      "original_names": [
+        "【原神演奏用】周杰伦—青花瓷（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 273.133,
+      "notes": 1221,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/东南苦行山 (1).gs2",
+      "primary": true,
+      "sha256": "632930005e29564395121f78bffa2a9ae6851ffefe4d1df1e35302761710cfc4",
+      "bytes": 2297,
+      "title": "东南苦行山 (1)",
+      "original_names": [
+        "东南苦行山 (1)（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 97.426,
+      "notes": 192,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/东南苦行山 (1)（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "cf16299483347ad30af5c19072d63e6fb81040bd5f5ea5ea09f1747d027c4fd6",
+      "bytes": 2297,
+      "title": "东南苦行山 (1)",
+      "original_names": [
+        "东南苦行山 (1)（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 97.426,
+      "notes": 192,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/丝柯克小曲.gs2",
+      "primary": true,
+      "sha256": "f52645a02fa094d0001099a4428caf3e24789bdbfae1111348c9988df96e3016",
+      "bytes": 1039,
+      "title": "丝柯克小曲",
+      "original_names": [
+        "丝柯克小曲.gs2"
+      ],
+      "sources": [
+        "助手曲库"
+      ],
+      "seconds": 32.142,
+      "notes": 75,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/云原神-动画短片小曲-第二篇.gs2",
+      "primary": true,
+      "sha256": "86786a7a980ec735bd7e1e650ece9ca6e09aa84dd8230f11317a3df48d1e63f1",
+      "bytes": 1364,
+      "title": "云原神-动画短片小曲-第二篇",
+      "original_names": [
+        "云原神-动画短片小曲-第二篇（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 44.125,
+      "notes": 100,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/云原神-动画短片小曲-第二篇（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "9f1f0284c674ee0e8e22c808cb4dd1d1ff5ab9090ca790b26becc07dabd0cd3f",
+      "bytes": 1364,
+      "title": "云原神-动画短片小曲-第二篇",
+      "original_names": [
+        "云原神-动画短片小曲-第二篇（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 44.125,
+      "notes": 100,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/兰亭序.gs2",
+      "primary": true,
+      "sha256": "ed5e45054b40e37260940076412e7fc7c3a589604f0e2c5a578138896bf1b9c5",
+      "bytes": 18129,
+      "title": "兰亭序",
+      "original_names": [
+        "兰亭序（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 257.338,
+      "notes": 1404,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/兰亭序（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "0a0f5008aa2927ab4540ccb254f0bcd8296fa4d5c042e4c3ee9c108c85b41620",
+      "bytes": 17248,
+      "title": "兰亭序",
+      "original_names": [
+        "兰亭序（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 257.338,
+      "notes": 1326,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/千里之外.gs2",
+      "primary": true,
+      "sha256": "63c1024d2714ee97db47f12818fbb90bd021e01907bdf5e44beb17802f9cf68f",
+      "bytes": 16557,
+      "title": "千里之外",
+      "original_names": [
+        "千里之外（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 242.145,
+      "notes": 1457,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/千里之外（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "b555597a397dc899e7019fbf4df33bb846e73c2ebec9e71acbd123b02dd764b1",
+      "bytes": 15593,
+      "title": "千里之外",
+      "original_names": [
+        "千里之外（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 242.145,
+      "notes": 1363,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/原琴 My Dearest.gs2",
+      "primary": true,
+      "sha256": "d7486845588602b5194ab7b92b99f8e4fb20931cbf7a9b8a213ebe38f283dc9c",
+      "bytes": 37162,
+      "title": "原琴 My Dearest",
+      "original_names": [
+        "原琴 My Dearest（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 489.586,
+      "notes": 3426,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/原琴 My Dearest（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "90c6a16ea9f03e6736717a349ef4b1ffc51c57956a8ca5337e7e971058d12c1c",
+      "bytes": 35212,
+      "title": "原琴 My Dearest",
+      "original_names": [
+        "原琴 My Dearest（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 489.586,
+      "notes": 3231,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/奥黛塔，快陪我去堆个雪人吧.gs2",
+      "primary": true,
+      "sha256": "118d880ae9e53e90d25aee76b9c0bfc13873238c708c428be51bc25ae7f30f86",
+      "bytes": 3826,
+      "title": "奥黛塔，快陪我去堆个雪人吧",
+      "original_names": [
+        "奥黛塔，快陪我去堆个雪人吧（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 69.466,
+      "notes": 311,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/奥黛塔，快陪我去堆个雪人吧（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "a6a862a2fa297fb6c98396fa2d604df6cecac74f910913dbeae6d89fcfde5e04",
+      "bytes": 3815,
+      "title": "奥黛塔，快陪我去堆个雪人吧",
+      "original_names": [
+        "奥黛塔，快陪我去堆个雪人吧（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 69.466,
+      "notes": 310,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/我不曾忘记-原琴版.gs2",
+      "primary": true,
+      "sha256": "4401e0571090e8da6d13ebf38c6fb9e5640d7b6e26031ca920ba099e9db29870",
+      "bytes": 18023,
+      "title": "我不曾忘记-原琴版",
+      "original_names": [
+        "我不曾忘记-原琴版（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 220.441,
+      "notes": 1687,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/我不曾忘记-原琴版（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "c5d4710b5e65a2f9e26ed9b516a39989d0ebe6c6e7caa30619f4308d34a821a9",
+      "bytes": 16526,
+      "title": "我不曾忘记-原琴版",
+      "original_names": [
+        "我不曾忘记-原琴版（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 220.441,
+      "notes": 1538,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/日不落.gs2",
+      "primary": true,
+      "sha256": "260e28537304d595158b48b11649314ffd1c9b9ad02e19f85490435020c47d49",
+      "bytes": 4928,
+      "title": "日不落",
+      "original_names": [
+        "日不落（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 228.574,
+      "notes": 426,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/日不落（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "c01be42599459ae64c112fcf242166eb734c59588249027d0e54b9f2f2642598",
+      "bytes": 4928,
+      "title": "日不落",
+      "original_names": [
+        "日不落（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 228.574,
+      "notes": 426,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/日不落  原琴完美表演版.gs2",
+      "primary": true,
+      "sha256": "9ed2d16e5e9f0b19993aa1add0b7428b1f734f86330be71a8a7e41ed29068205",
+      "bytes": 26973,
+      "title": "日不落  原琴完美表演版",
+      "original_names": [
+        "日不落  原琴完美表演版（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 243.754,
+      "notes": 2579,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/日不落  原琴完美表演版（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "fd16032036871abf0653dd174fb3cb1bafc1cff14d42e55bda13c7ebfed2c52b",
+      "bytes": 24143,
+      "title": "日不落  原琴完美表演版",
+      "original_names": [
+        "日不落  原琴完美表演版（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 243.754,
+      "notes": 2296,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/枕边童话（诗琴）.gs2",
+      "primary": true,
+      "sha256": "c28b344c9d96758f9a6acd44f556bc92a725cf7fdf51d9de203a5949dac1bad6",
+      "bytes": 6529,
+      "title": "枕边童话（诗琴）",
+      "original_names": [
+        "枕边童话（诗琴）.gs2"
+      ],
+      "sources": [
+        "助手曲库"
+      ],
+      "seconds": 88.613,
+      "notes": 554,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/樱花草.gs2",
+      "primary": true,
+      "sha256": "30a7fd1e2db70e13c93d877f44be6e1fd8d1e8867e78039e9dfe7304a5a95132",
+      "bytes": 15084,
+      "title": "樱花草",
+      "original_names": [
+        "樱花草（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 236.8,
+      "notes": 1266,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/樱花草（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "e3e352d029085160f97047a090f931ebad6ef44466f7af5ea1a83bc88eb33ca7",
+      "bytes": 13124,
+      "title": "樱花草",
+      "original_names": [
+        "樱花草（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 236.8,
+      "notes": 1070,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/此去半生（跃律琴-降半音）.gs2",
+      "primary": true,
+      "sha256": "b3720a58192fe48a95d06120bbee320cfcc65f1de5fcb518d83c98a0a4d9bcd2",
+      "bytes": 19081,
+      "title": "此去半生（跃律琴-降半音）",
+      "original_names": [
+        "此去半生（跃律琴-降半音）.gs2"
+      ],
+      "sources": [
+        "助手曲库"
+      ],
+      "seconds": 217.999,
+      "notes": 1558,
+      "skipped": 39
+    },
+    {
+      "file": "曲谱/沃雅妮莎歌剧.gs2",
+      "primary": true,
+      "sha256": "fade8888f2997fe7f261fddc2fc438c3b4c7769da9f909b3ece2c5ac0603ee05",
+      "bytes": 6292,
+      "title": "沃雅妮莎歌剧",
+      "original_names": [
+        "沃雅妮莎歌剧（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 75.752,
+      "notes": 455,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/沃雅妮莎歌剧（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "8960337ca2bb26d822564490cd1a07e5122c048e4a128d5ddc7cbead15a09161",
+      "bytes": 6211,
+      "title": "沃雅妮莎歌剧",
+      "original_names": [
+        "沃雅妮莎歌剧（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 75.752,
+      "notes": 454,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/渊下宫战斗曲.gs2",
+      "primary": true,
+      "sha256": "fca78f09d6992ddea3190b41417e1a89728a85f1dbc262dba273aeb911f4b1d5",
+      "bytes": 36244,
+      "title": "渊下宫战斗曲",
+      "original_names": [
+        "渊下宫战斗曲（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 243.641,
+      "notes": 3315,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/渊下宫战斗曲（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "3fefd33122bdf1c55fb8d30719d89413ef24b216f76ad3b75a834acb7dafb45a",
+      "bytes": 36063,
+      "title": "渊下宫战斗曲",
+      "original_names": [
+        "渊下宫战斗曲（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 243.641,
+      "notes": 3300,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/美人鱼（林俊杰）.gs2",
+      "primary": true,
+      "sha256": "5c647e3f8ea8fb0857be500becd29879a497bc228c29c3b914a26f8551aff492",
+      "bytes": 36197,
+      "title": "美人鱼（林俊杰）",
+      "original_names": [
+        "美人鱼（林俊杰·三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "转换输出"
+      ],
+      "seconds": 236.837,
+      "notes": 3359,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/美人鱼（林俊杰·两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "54fa0a54e9eeedbf8d9eeb85f433a215ae45c9109b88b66437dd015c7ba957b8",
+      "bytes": 31904,
+      "title": "美人鱼（林俊杰）",
+      "original_names": [
+        "美人鱼（林俊杰·两排琴键版）.gs2"
+      ],
+      "sources": [
+        "转换输出"
+      ],
+      "seconds": 236.837,
+      "notes": 2933,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/莫扎特 钢琴奏鸣曲C，K545—快板.gs2",
+      "primary": true,
+      "sha256": "b605baecb04d2ec18efca75c971c92842be2386d20241363dbfb33825b451d7f",
+      "bytes": 29799,
+      "title": "莫扎特 钢琴奏鸣曲C，K545—快板",
+      "original_names": [
+        "莫扎特 钢琴奏鸣曲C，K545—快板（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 281.855,
+      "notes": 2712,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/莫扎特 钢琴奏鸣曲C，K545—快板（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "d6c9098d29db11d037d4e4254fa285601b0a4e62a031e44f439591adf2bdb19f",
+      "bytes": 29577,
+      "title": "莫扎特 钢琴奏鸣曲C，K545—快板",
+      "original_names": [
+        "莫扎特 钢琴奏鸣曲C，K545—快板（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 281.855,
+      "notes": 2690,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/银月之庭（蓝花）C大调.gs2",
+      "primary": true,
+      "sha256": "5c0b58d534fc00e28bd4cd6162695b0072fb978343f591f2a1112a01b5191864",
+      "bytes": 5459,
+      "title": "银月之庭（蓝花）C大调",
+      "original_names": [
+        "银月之庭（蓝花）C大调.gs2"
+      ],
+      "sources": [
+        "助手曲库"
+      ],
+      "seconds": 133.061,
+      "notes": 426,
+      "skipped": 14
+    },
+    {
+      "file": "曲谱/默.gs2",
+      "primary": true,
+      "sha256": "471668cdf6d1aa57bef51057951f7aa29b4e8ddebc781e82f45f538fb9db02d6",
+      "bytes": 19915,
+      "title": "默",
+      "original_names": [
+        "默（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 318.588,
+      "notes": 1662,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/默（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "d62322096c64a1bbb4e13b795e914096a7c8b2b5c0f756df8390d135332e0180",
+      "bytes": 19640,
+      "title": "默",
+      "original_names": [
+        "默（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 318.588,
+      "notes": 1636,
+      "skipped": 0
+    },
+    {
+      "file": "曲谱/默-何以笙箫默.gs2",
+      "primary": true,
+      "sha256": "f16c28807632303b19953a2026c901e3343f0f58bb385dc478afc67d3f710234",
+      "bytes": 19931,
+      "title": "默-何以笙箫默",
+      "original_names": [
+        "默-何以笙箫默（三排诗琴版）.gs2"
+      ],
+      "sources": [
+        "助手曲库",
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 318.588,
+      "notes": 1662,
+      "skipped": 0
+    },
+    {
+      "file": "历史版本/默-何以笙箫默（两排琴键版）.gs2",
+      "primary": false,
+      "sha256": "528dca5ed04a09a0cf5eea94716f262fccbcbd84e74eabc0d72945489b34cbf9",
+      "bytes": 19656,
+      "title": "默-何以笙箫默",
+      "original_names": [
+        "默-何以笙箫默（两排琴键版）.gs2"
+      ],
+      "sources": [
+        "历史曲谱ZIP",
+        "转换输出"
+      ],
+      "seconds": 318.588,
+      "notes": 1636,
+      "skipped": 0
+    }
+  ]
+}

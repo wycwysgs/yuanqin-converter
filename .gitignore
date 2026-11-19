@@ -32,3 +32,7 @@ dist/
 原琴转换记录_*.csv
 settings.json
 *.exe
+
+# Published score collection
+!scores/曲谱/
+!scores/**/*.gs2
