@@ -12,6 +12,7 @@ __pycache__/
 build/
 dist/
 *.spec
+!yuanqin.spec
 
 # 编辑器
 .idea/
@@ -24,3 +25,10 @@ dist/
 *.mid
 *.midi
 !tests/fixtures/*.mid
+
+# Local runtime data
+曲谱/
+原琴运行日志.txt*
+原琴转换记录_*.csv
+settings.json
+*.exe

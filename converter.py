@@ -1,6 +1,7 @@
 from collections import defaultdict, deque
 from pathlib import Path
 import re
+from bisect import bisect_right
 import mido
 
 WHITE = {0, 2, 4, 5, 7, 9, 11}
@@ -56,19 +57,72 @@ def duration(data, speed=1):
 def selected_notes(data, tracks, no_drums):
     return [n for n in data['notes'] if n[4] in tracks and (not no_drums or n[3] != 9)]
 
-def suggest(notes):
+def tick_clock(data):
+    ticks, bases, rates = [], [], []
+    last, tempo, seconds = 0, 500000, 0.
+    for tick, new in data['tempos']:
+        seconds += (tick-last)*tempo/data['division']/1e6
+        ticks.append(tick); bases.append(seconds); rates.append(new/data['division']/1e6)
+        last, tempo = tick, new
+    def at(tick):
+        index = max(0, bisect_right(ticks, tick)-1)
+        return bases[index] + (tick-ticks[index])*rates[index]
+    return at
+
+
+def white_rate(notes, shift=0, data=None):
+    clock = tick_clock(data) if data else lambda tick: tick
+    weights = [(n, max(.001, clock(n[1])-clock(n[0]))) for n in notes]
+    total = sum(weight for _, weight in weights)
+    return sum(weight for n, weight in weights if (n[2]+shift)%12 in WHITE)/total if total else 0.
+
+
+def arrange_notes(data, tracks, no_drums=True, arrangement='full'):
+    source = selected_notes(data, tracks, no_drums)
+    if arrangement == 'full': return source
+    if arrangement not in ('simple', 'melody'):
+        raise ValueError('伴奏模式无效。')
+    at = tick_clock(data)
+    groups, cluster, start = [], [], None
+    for note in sorted(source, key=lambda n: (n[0], n[2])):
+        when = at(note[0])
+        if cluster and when-start > .03:
+            groups.append(cluster); cluster = []
+        if not cluster: start = when
+        cluster.append(note)
+    if cluster: groups.append(cluster)
+    result = []
+    for group in groups:
+        pitches = {}
+        for n in group:
+            if n[2] not in pitches or n[1]-n[0] > pitches[n[2]][1]-pitches[n[2]][0]: pitches[n[2]] = n
+        ordered = sorted(pitches.values(), key=lambda n: n[2])
+        if arrangement == 'melody':
+            result.append(ordered[-1])
+        elif len(ordered) <= 3:
+            result.extend(ordered)
+        else:
+            middle = min(ordered[1:-1], key=lambda n: abs(n[2]-(ordered[0][2]+ordered[-1][2])/2))
+            result.extend((ordered[0], middle, ordered[-1]))
+    return sorted(result, key=lambda n: (n[0], n[2]))
+
+
+def suggest(notes, data=None):
     if not notes:
         raise ValueError('所选轨道没有可转换的音符。')
-    return min(range(-6, 6), key=lambda s: (sum((n[2]+s)%12 not in WHITE for n in notes), abs(s), s))
+    return min(range(-6, 7), key=lambda s: (-round(white_rate(notes, s, data), 12), abs(s), s))
 
-def convert(data, tracks, low=48, shift=0, speed=1, no_drums=True, policy='nearest', title='曲谱'):
+def convert(data, tracks, low=48, shift=0, speed=1, no_drums=True, policy='nearest', title='曲谱', arrangement='full'):
     if not 0.25 <= speed <= 4:
         raise ValueError('速度倍率应为 0.25–4。')
-    source = selected_notes(data, tracks, no_drums)
+    source = arrange_notes(data, tracks, no_drums, arrangement)
     if not source:
         raise ValueError('所选轨道没有可转换的音符。')
     mapped = defaultdict(dict)
     stats = dict(source=len(source), octave=0, corrected=0, skipped=0, merged=0, clipped=0)
+    stats['reduced'] = len(selected_notes(data, tracks, no_drums)) - len(source)
+    stats['white_before'] = white_rate(source, 0, data)
+    stats['white_after'] = white_rate(source, shift, data)
     for start, end, pitch, _, _ in source:
         p = pitch + shift
         if p%12 not in WHITE:

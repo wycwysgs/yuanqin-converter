@@ -1,114 +1,87 @@
-# 原琴转换器 · MIDI → GS2
+# 原琴工具箱 3.4 · MIDI 转换与游戏演奏
 
 [![tests](https://github.com/wycwysgs/yuanqin-converter/actions/workflows/test.yml/badge.svg)](https://github.com/wycwysgs/yuanqin-converter/actions/workflows/test.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![python](https://img.shields.io/badge/python-3.9%2B-blue.svg)](requirements.txt)
 
-**把普通 MIDI 变成《原神》里能弹的曲谱。** 输出可直接交给 BetterGI 原琴助手（YuanQinAssistant）播放的 `.gs2` 文件 —— 自动移调、八度折回、生成前自校验。
+把 MIDI 批量转换为《原神》乐器可用的 GS2 曲谱，并在同一个程序里管理、试听和演奏。支持 BetterGI 的 YuanQinAssistant，也可使用自带播放器。
 
-> Convert standard MIDI files into `.gs2` scores for **Genshin Impact**'s in-game instrument (原琴 / 诗琴, e.g. the Windsong Lyre), playable through [BetterGI](https://github.com/babalae/better-genshin-impact)'s YuanQinAssistant. Auto-transpose, octave folding, and validation before writing.
+**[下载 Windows 版](https://github.com/wycwysgs/yuanqin-converter/releases/latest)** · [详细使用说明](docs/使用说明.txt)
 
-保留原曲节奏与时间轴，自动移调到 C 大调、把超出琴域的音符按八度折回，输出带自校验的曲谱文件：生成后无法在游戏里弹错，因为转换阶段就会拦下不合法的按键序列。
+## 3.4 版
 
-![界面截图](docs/screenshot.png)
+- 主窗口和游戏悬浮窗统一为深蓝、青绿色主题，新增音符图标。
+- 曲库、转换队列、导出和演奏设置分区显示；开始与停止按钮更醒目。
+- 主窗口可滚动，悬浮窗保持紧凑布局，支持搜索和选择歌曲。
 
-## 特性
+## 功能
 
-- **保留原速度**：读取 MIDI 的 tempo map，按 tick 精确还原节奏，可选 0.25–4 倍速缩放
-- **多轨选择**：默认选中所有有音符的轨道，伴奏过密时可以只留主旋律
-- **自动移调**：统计各半音下"落在 C 大调白键上"的音符比例，在 −6 ~ +5 内推荐最佳移调量
-- **半音三种处理**：就近向下修正 / 向上修正 / 直接忽略
-- **音域折回**：超出琴键范围的音符按八度回折，不丢音、不越界
-- **两排 / 三排**：两排琴键（60–83，A–J + Q–U）与三排诗琴（48–83，加 Z–M）
-- **鼓轨过滤**：默认剔除 MIDI 通道 10
-- **同名不覆盖**：目标文件已存在时自动加 `（2）` `（3）` 后缀
-- **生成即校验**：`validate()` 逐条检查事件格式、按键配对、未松开琴键、音域与白键合法性，不合法直接拒绝写出
-- **一键安装**：可直接写入 BetterGI 的 `assets/score` 目录，也可另存到任意位置
+- **批量转换**：多选 MIDI 或添加整个文件夹；单首失败继续处理，输出 CSV 记录。
+- **轨道与编曲**：完整伴奏、简化伴奏（每组最多 3 音）、主旋律（优先最高音）。
+- **自动移调**：根据实际音符时长推荐白键适配率较高的移调；支持手动调整、半音修正和鼓轨过滤。
+- **保留节奏**：读取 MIDI 速度变化；转换与演奏均支持调整倍率。
+- **一首一份曲谱**：转换为通用三排 GS2；演奏时勾选三排模式，取消则折回为两排，无需重复生成。
+- **曲库与演奏**：列表连播、倒计时、间隔、自定义全局快捷键，切出游戏或按住修饰键时自动暂停。
+- **悬浮控制**：置顶窗口可搜索、选曲、试听、开始、暂停和停止，并显示游戏连接与权限提示。
+- **试听与自检**：合成音色试听前 20 秒；“测试琴键 A”倒计时后只发送一次琴键。
+- **设置记忆**：保存曲库、速度、排数、快捷键、转换选项和悬浮窗位置。
 
-## 快速开始
+## 快速使用
 
-### 方式一：下载现成的 exe
+1. 从 [Releases](https://github.com/wycwysgs/yuanqin-converter/releases/latest) 下载 `yuanqin-converter.exe`，双击运行，在 Windows 管理员提示中选择“是”。Windows x64，无需安装 Python。
+2. 打开工具箱，在 **MIDI 转换** 页添加文件，按需调整轨道和编曲，点击 **转换并加入曲库**。
+3. 在曲库或悬浮窗选择歌曲，可先 **试听前20秒**。按乐器勾选或取消 **三排模式**。
+4. 原神使用窗口或无边框模式，打开乐器演奏界面，关闭聊天框。
+5. 点击悬浮窗 **开始 / 继续**，程序请求切回游戏，默认倒计时 3 秒后开始。
+6. 默认 **F8** 开始 / 暂停，**F9** 停止。切出游戏会自动暂停；停止后再次开始会从曲首播放。
 
-到 [**Releases**](https://github.com/wycwysgs/yuanqin-converter/releases/latest) 下载 `yuanqin-converter.exe`，双击即可运行 —— 不用装 Python，也不联网。
+“批量安装到助手”可输出到 BetterGI 的曲谱目录，默认：
 
-> 单文件程序，首次启动需解包到临时目录，会慢几秒。Windows x64。
+```text
+C:/Program Files/BetterGI/User/JsScript/YuanQinAssistant/assets/score
+```
 
-### 方式二：源码运行
+设置保存在 `%LOCALAPPDATA%/YuanQinToolbox/settings.json`。程序旁的 `曲谱` 文件夹存放“转换并加入曲库”的结果。
+
+## 源码运行与打包
+
+Windows、Python **3.10+**（含 tkinter）：
 
 ```powershell
 python -m pip install -r requirements.txt
 python app.py
 ```
 
-需要 Python 3.9+（自带 tkinter）与 [`mido`](https://github.com/mido/mido)。
+默认打开悬浮窗。`python app.py --main` 打开主窗口；`python app.py --preview --main` 仅预览界面，不注册全局快捷键、不发送琴键、不读写正式用户设置。
 
-## 使用步骤
+源码运行若需匹配游戏的管理员权限，请从管理员终端启动。发布的 EXE 已设置启动时请求管理员权限。
 
-1. 点击 **选择 MIDI 文件**，打开 `.mid` / `.midi`
-2. 选择要保留的轨道（Ctrl 单击多选、Shift 连选）
-3. 选择 **琴键范围**：两排为默认，三排诗琴多出低音区
-4. 点 **推荐移调**，或手动填半音数；速度倍率 1 表示原速
-5. 按需调整 **半音处理** 与 **去除鼓轨**
-6. 点 **生成并安装到助手**，或 **生成并另存**
-7. 停止并重新运行原琴助手，进入游戏演奏界面，搜索曲谱标题播放
-
-默认助手目录：
-
-```
-C:/Program Files/BetterGI/User/JsScript/YuanQinAssistant/assets/score
+```powershell
+python -m pip install pyinstaller
+python -m PyInstaller --noconfirm yuanqin.spec
 ```
 
-BetterGI 装在别处时，用 **选择…** 定位到对应的 `assets/score`。目录无写入权限时会提示改用"另存 + 手动复制"。
+产物为 `dist/原琴转换器.exe`，含专属图标与 `requireAdministrator` 清单。
 
-## 键位映射
+## 键位与原理
 
-原琴只能弹 C 大调自然音，三排共 36 键：
-
-| 音域 | MIDI | 键位 |
+| 音域 | MIDI 自然音 | 游戏键位 |
 |---|---|---|
-| 低音区（仅三排） | 48 50 52 53 55 57 59 | `Z X C V B N M` |
-| 中音区 | 60 62 64 65 67 69 71 | `A S D F G H J` |
-| 高音区 | 72 74 76 77 79 81 83 | `Q W E R T Y U` |
+| 低音区（三排） | 48 50 52 53 55 57 59 | Z X C V B N M |
+| 中音区 | 60 62 64 65 67 69 71 | A S D F G H J |
+| 高音区 | 72 74 76 77 79 81 83 | Q W E R T Y U |
 
-例：MIDI `72/74/76` → `Q/W/E`，`60/62/64` → `A/S/D`，`48/50/52` → `Z/X/C`。
+三排共 **21 键**。两排模式将低音提高一个八度映射到中音区，同刻重复琴键合并，原曲谱不修改。
 
-## GS2 文件格式
+转换器配对 MIDI 音符、保留速度变化，再筛选轨道、移调、处理半音、按八度折回并校验 GS2。播放器将 GS2 转为绝对时间琴键序列，通过 Windows `SendInput` 模拟按键；悬浮窗是普通置顶窗口，不向游戏注入窗口或读取游戏内存。
 
-```
-!v/2
-!gi/0
-!ti/兰亭序（两排琴键版）
-!ar/原琴转换器
-!di/480
-移调-2半音；速度1倍；超出音域按八度折回。
-!tr/0s789473|1200n67|238u67|2n69|238u69|...
-```
+## 限制
 
-`!tr` 里以 `|` 分隔事件，每个事件为「经过的 tick 数 + 类型 + 值」：
-
-- `n` 按下音符（值为 MIDI 音高）
-- `u` 松开音符
-- `s` 设置速度（微秒 / 四分音符）
-
-`!di` 是 MIDI 的 ticks per beat，播放器用它把 tick 换算成毫秒。
-
-## 转换原理
-
-1. `mido` 读入 MIDI，按轨道累加 tick，把 `note_on` / `note_off` 配对成「音高 + 起止时间」；未闭合的音符在轨末补结束事件并记录警告
-2. 按轨道与通道筛选，默认去掉鼓轨（channel 10）
-3. 统计全曲音符分布，算出在 C 大调白键上命中率最高的移调量
-4. 残余半音按所选策略修正，越界音符按八度折回，同刻同键合并、重叠事件截断
-5. 生成 `!v/2` 曲谱文本，`validate()` 自检通过后写入磁盘
-
-## 已知限制
-
-- 支持 MIDI Type 0 / 1；不支持异步 Type 2 与 SMPTE 时间格式
-- 只吃 MIDI，不能把 MP3、视频或简谱图片直接转成曲谱
-- "推荐移调"基于自然音命中率，不等于自动识别全部转调；转调多或半音多的曲子仍需试听微调
-- 半音修正与八度折回会改变部分旋律、和声或层次
-- 延音踏板、音量、弯音、音色等控制信息不输出，实际延音由游戏乐器决定
-- 曲谱长度跟随输入文件，不会补足原曲缺失段落
-- 钢琴编配通常最适合原琴；多乐器 MIDI 建议先试主旋律 + 少量伴奏
+- 支持 MIDI Type 0/1；不支持 Type 2、SMPTE 或直接转换 MP3、视频、简谱图片。
+- 原神乐器音域有限，半音修正和八度折回会改变部分旋律与和声；试听音色与游戏不同。
+- 主旋律模式按最高音选取，无法保证识别人声旋律。踏板、力度、音色和弯音不还原。
+- 程序不能判断游戏是否已打开乐器界面，也不能自动判断琴键是否发声；可使用“测试琴键 A”检查。
+- 悬浮窗适合窗口/无边框游戏；独占全屏下可能不可见。
+- 当前不保存未转换的 MIDI 队列和逐首临时编辑。
 
 ## 测试
 
@@ -116,57 +89,14 @@ BetterGI 装在别处时，用 **选择…** 定位到对应的 `assets/score`�
 python -m unittest discover -s tests -v
 ```
 
-测试不依赖外部 MIDI 文件：用 `mido` 现场构造样例，覆盖轨道读取、时长换算、移调推荐、半音三种策略、鼓轨过滤、八度折回、空选择报错、同名避让与文件名净化。
+测试使用现场生成的 MIDI 和临时文件；游戏输入通过替身测试，不向真实游戏发送琴键。
 
-## 打包
+## 第三方与许可
 
-```powershell
-python -m pip install pyinstaller
-pyinstaller --noconfirm --onefile --windowed --name 原琴转换器 app.py
-```
-
-产物在 `dist/原琴转换器.exe`。
-
-## 关于第三方
-
-- [BetterGI](https://github.com/babalae/better-genshin-impact) 及其原琴助手（YuanQinAssistant）由第三方开发，本项目仅生成与之兼容的曲谱文件，与官方无关联
-- 依赖 [`mido`](https://github.com/mido/mido)（MIT）
-
-本仓库**不包含**任何 MIDI 源文件或转换后的曲谱成品，避免传播可能受版权保护的音乐内容。请自行准备拥有合法使用权的 MIDI。
-
-## License
+本项目与 HoYoverse、[BetterGI](https://github.com/babalae/better-genshin-impact) 无关联。依赖 [mido](https://github.com/mido/mido)（MIT）。仓库和发布包不包含 MIDI 源文件、个人曲谱或运行日志。
 
 [MIT](LICENSE)
 
----
-
 ## English
 
-A small GUI tool that turns any MIDI file into a `.gs2` score for **Genshin Impact**'s in-game instrument (原琴 / 诗琴), so it can be auto-played by [BetterGI](https://github.com/babalae/better-genshin-impact)'s YuanQinAssistant.
-
-**What it does**
-
-- Rebuilds the note timeline from MIDI ticks, preserving the tempo map; optional 0.25×–4× speed
-- Track picking (all note-bearing tracks by default) and drum-track (channel 10) removal
-- Suggests a transposition in −6…+5 that puts the most notes on C-major white keys; leftover accidentals are shifted down, shifted up, or dropped
-- Notes outside the instrument range fold back by whole octaves; simultaneous duplicates merge, overlaps are clipped
-- Two-row layout (`QWERTYU` / `ASDFGHJ`, MIDI 60–83) or three-row (`+ ZXCVBNM`, MIDI 48–83)
-- Every score is validated (event syntax, key pairing, range, white keys) before it is written, so an unplayable sequence can never reach the game
-- Writes directly into BetterGI's `assets/score`, or saves anywhere; existing files are never overwritten
-
-**Run it**
-
-```powershell
-python -m pip install -r requirements.txt
-python app.py
-```
-
-Or download `yuanqin-converter.exe` from [Releases](https://github.com/wycwysgs/yuanqin-converter/releases/latest) (Windows x64, no Python needed).
-
-**Score format**
-
-`!v/2` header plus one `!tr/` line of `|`-separated events: `<ticks>n<pitch>` (press), `<ticks>u<pitch>` (release), `<ticks>s<tempo>` (μs per beat), where `<ticks>` is delta time since the previous event and `!di/` holds the MIDI ticks-per-beat.
-
-**Notes**
-
-Requires Python 3.9+ and [mido](https://github.com/mido/mido). Licensed under MIT. Not affiliated with HoYoverse; the repository ships no MIDI files or finished scores.
+Yuanqin Toolbox is a Windows GUI for batch MIDI-to-GS2 conversion, library management, synthesized preview and Genshin Impact instrument playback. Version 3.4 adds a shared navy/teal interface and a compact topmost player. Choose two or three keyboard rows at playback time. Download the executable from Releases, or run `python app.py` with Python 3.10+ and mido. The executable requests administrator privileges to match an elevated game. No MIDI files or finished music scores are distributed.
