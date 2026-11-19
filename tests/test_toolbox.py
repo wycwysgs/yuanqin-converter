@@ -1,6 +1,7 @@
 """Portable regression coverage for the integrated conversion/playback format."""
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 import mido
@@ -28,13 +29,19 @@ class ToolboxTest(unittest.TestCase):
     def test_batch_failure_continues_and_modes_parse(self):
         bad = self.folder / 'bad.mid'
         bad.write_bytes(b'invalid')
+        reports = set()
+        # Older Windows clocks can return the same timestamp for several batches.
         for mode, count in [('full', 5), ('simple', 3), ('melody', 1)]:
             with self.subTest(mode=mode):
-                result = run_batch([Job(bad), Job(self.midi)], self.folder, Options(arrangement=mode))
+                with patch('batch.datetime') as date:
+                    date.now.return_value.strftime.return_value = '20261119_120000_000000'
+                    result = run_batch([Job(bad), Job(self.midi)], self.folder, Options(arrangement=mode))
                 self.assertEqual((result['succeeded'], result['failed'], result['outputs']), (1, 1, 1))
                 score = load_score(result['rows'][1]['输出'])
                 self.assertEqual(score.notes, count)
                 self.assertTrue(Path(result['report']).is_file())
+                self.assertNotIn(result['report'], reports)
+                reports.add(result['report'])
 
     def test_two_row_folding_preserves_source_and_deduplicates(self):
         raw = Score(Path('test.gs2'), '测试', ((0.0, ('Z', 'A', 'Q')), (1.0, ('M',))), 2, 4)

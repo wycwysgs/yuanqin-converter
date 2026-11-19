@@ -1,4 +1,4 @@
-# 原琴工具箱 3.4 · MIDI 转换与游戏演奏
+# 原琴工具箱 3.4.1 · MIDI 转换与游戏演奏
 
 [![tests](https://github.com/wycwysgs/yuanqin-converter/actions/workflows/test.yml/badge.svg)](https://github.com/wycwysgs/yuanqin-converter/actions/workflows/test.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -8,6 +8,8 @@
 **[下载 Windows 版](https://github.com/wycwysgs/yuanqin-converter/releases/latest)** · [详细使用说明](docs/使用说明.txt)
 
 ## 3.4 版
+
+3.4.1 修复极短间隔连续转换时，CSV 记录可能重名导致保存失败的问题。
 
 - 主窗口和游戏悬浮窗统一为深蓝、青绿色主题，新增音符图标。
 - 曲库、转换队列、导出和演奏设置分区显示；开始与停止按钮更醒目。

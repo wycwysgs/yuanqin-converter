@@ -4,6 +4,7 @@ from pathlib import Path
 from datetime import datetime
 import csv
 import math
+from uuid import uuid4
 from converter import load, arrange_notes, suggest, convert, unused_path, validate
 from song_name import clean_title
 
@@ -74,7 +75,7 @@ def run_batch(jobs, folder, options, notify=lambda event: None):
         notify(dict(kind='progress', done=index + 1, total=len(jobs)))
     report, report_error = None, None
     try:
-        name = '原琴转换记录_' + datetime.now().strftime('%Y%m%d_%H%M%S_%f') + '.csv'
+        name = '原琴转换记录_' + datetime.now().strftime('%Y%m%d_%H%M%S_%f') + '_' + uuid4().hex + '.csv'
         report = folder / name
         with report.open('x', encoding='utf-8-sig', newline='') as f:
             writer = csv.DictWriter(f, fieldnames=['源文件', '结果', '输出', '移调',

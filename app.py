@@ -60,7 +60,7 @@ class App:
         self.preferences = read_preferences(self.settings_path) if self.settings_path else {}
         self.save_timer = None
         self.loading_library = load_library
-        root.title('原琴工具箱 3.4 · 转换与演奏')
+        root.title('原琴工具箱 3.4.1 · 转换与演奏')
         height = min(900, max(640, root.winfo_screenheight() - 100))
         root.geometry(f'1060x{height}')
         root.minsize(920, 640)
@@ -202,7 +202,7 @@ if __name__ == '__main__':
         handler = RotatingFileHandler(application_dir()/'原琴运行日志.txt',maxBytes=1_000_000,backupCount=1,encoding='utf-8')
         handler.setFormatter(logging.Formatter('%(asctime)s %(levelname)s %(message)s'))
         log.addHandler(handler)
-        log.info('start version=3.4 preview=%s', '--preview' in sys.argv)
+        log.info('start version=3.4.1 preview=%s', '--preview' in sys.argv)
     except OSError: pass
     root = tk.Tk()
     def report_callback(exc,value,trace):
